@@ -15,20 +15,20 @@ const verb = [
   "wandert",
   "schläft",
   "kuschelt",
-  "küsst",
+  "spielt",
   "ißt",
-  "baded",
+  "badet",
 ];
 
 const pet = [
-  "Wolf",
-  "Löwe",
-  "Dinosauier",
-  "Pagagei",
-  "Elefant",
-  "Hai",
-  "Schlange",
-  "Kamel",
+  "einen Wolf",
+  "ein Löwe",
+  "ein Dinosauier",
+  "einen Pagagei",
+  "ein Elefant",
+  "ein Hai",
+  "eine Schlange",
+  "einen Kamel",
 ];
 
 const place = [
@@ -39,13 +39,22 @@ const place = [
   "auf einen Bauernhof",
   "irgendwo im Nirgendwo",
   "zwischen Himmel und Hölle",
-  "wo der Pfeffer wächst",
+  "da, wo der Pfeffer wächst",
 ];
 
 const random = (array) => {
-  const number = array.lenth
-  const randomNumber = Math.floor(Math.random() * number)
+  const randomNumber = Math.floor(Math.random() * array.length);
+
   return randomNumber
 }
-console.log(random(pet))
-// "Anna" "lebt" mit "einen Wolf" "in die Stadt"
+
+const massageGenerator = () => {
+  const randomName = name[random(name)]
+  const randomVerb = verb[random(verb)];
+  const randomPet = pet[random(pet)];
+  const randomPlace = place[random(place)];
+
+  console.log(`${randomName} ${randomVerb} mit ${randomPet} ${randomPlace}.`);
+}
+
+massageGenerator()
