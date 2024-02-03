@@ -42,5 +42,10 @@ const place = [
   "wo der Pfeffer wächst",
 ];
 
-console.log()
+const random = (array) => {
+  const number = array.lenth
+  const randomNumber = Math.floor(Math.random() * number)
+  return randomNumber
+}
+console.log(random(pet))
 // "Anna" "lebt" mit "einen Wolf" "in die Stadt"
